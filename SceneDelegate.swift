@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  researchPapers
+//  favoritePlaces
 //
 //  Created by Mohammed Abdullah Alotaibi on 21/12/2022.
 //
