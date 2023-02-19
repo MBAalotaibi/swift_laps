@@ -1,112 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jII-Le-pW4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Places-->
-        <scene sceneID="m4c-TX-1H5">
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
             <objects>
-                <tableViewController title="Places" id="v1b-aT-p7I" customClass="PlacesViewController" customModule="favoritePlaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="sh8-bk-fvW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="5Ey-h0-YVa">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ey-h0-YVa" id="PwN-Cb-E57">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="v1b-aT-p7I" id="ejx-BK-7xW"/>
-                            <outlet property="delegate" destination="v1b-aT-p7I" id="x7K-bl-uN8"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Places" id="6nZ-xg-2UY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YdQ-Oa-ezE">
-                            <connections>
-                                <segue destination="pxV-hO-KII" kind="show" identifier="toMap" id="OTv-v4-HdL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="table" destination="sh8-bk-fvW" id="oLY-jZ-dCx"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc4-nL-0mj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1797.709923664122" y="3.5211267605633805"/>
-        </scene>
-        <!--Map-->
-        <scene sceneID="jYc-Q0-8Gc">
-            <objects>
-                <viewController title="Map" id="pxV-hO-KII" customClass="ViewController" customModule="favoritePlaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lfw-ET-7mS">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="diceRoll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pe5-01-LBe">
-                                <rect key="frame" x="16" y="103" width="361" height="715"/>
-                                <gestureRecognizers/>
-                                <hybridMapConfiguration key="preferredConfiguration"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hFy-qB-XG8" appends="YES" id="6VL-X8-fos"/>
-                                </connections>
-                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UJ0-GK-Sdy">
+                                <rect key="frame" x="16" y="96" width="361" height="679.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice Rolling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLD-sh-3yV">
+                                        <rect key="frame" x="135.66666666666666" y="0.0" width="89.666666666666657" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I just rolled two dice. What number do you think I rolled?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BO-CF-R8k">
+                                        <rect key="frame" x="18.666666666666657" y="50.333333333333343" width="324" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nIy-d0-sX9">
+                                        <rect key="frame" x="130.66666666666666" y="121" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Qvt-oE-aky"/>
+                                            <constraint firstAttribute="width" constant="100" id="bwr-Yn-YyP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfB-DP-C94">
+                                        <rect key="frame" x="144.66666666666666" y="201" width="72" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Guess"/>
+                                        <connections>
+                                            <action selector="guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cED-QC-I3E"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6F-4J-aR2">
+                                        <rect key="frame" x="155.66666666666666" y="265.33333333333331" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roll-dice" translatesAutoresizingMaskIntoConstraints="NO" id="7yp-h7-DKx">
+                                        <rect key="frame" x="0.0" y="345.33333333333326" width="361" height="334"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="QLa-bt-CqZ"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QLa-bt-CqZ" firstAttribute="trailing" secondItem="pe5-01-LBe" secondAttribute="trailing" constant="16" id="5eV-6m-oCb"/>
-                            <constraint firstItem="pe5-01-LBe" firstAttribute="bottom" secondItem="QLa-bt-CqZ" secondAttribute="bottom" id="AfH-Yu-7tL"/>
-                            <constraint firstItem="pe5-01-LBe" firstAttribute="top" secondItem="QLa-bt-CqZ" secondAttribute="top" id="EWo-Tz-aKG"/>
-                            <constraint firstItem="pe5-01-LBe" firstAttribute="leading" secondItem="QLa-bt-CqZ" secondAttribute="leading" constant="16" id="YjA-Va-NFZ"/>
+                            <constraint firstItem="UJ0-GK-Sdy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="7w3-Sj-I1R"/>
+                            <constraint firstAttribute="trailing" secondItem="UJ0-GK-Sdy" secondAttribute="trailing" constant="16" id="KBw-rQ-ivB"/>
+                            <constraint firstItem="UJ0-GK-Sdy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tdu-U5-uY5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="ohu-VO-BYi"/>
                     <connections>
-                        <outlet property="mapView" destination="pe5-01-LBe" id="MpJ-o9-FdU"/>
+                        <outlet property="inputBox" destination="nIy-d0-sX9" id="SRg-i5-7SS"/>
+                        <outlet property="message" destination="C6F-4J-aR2" id="Yul-fp-RkL"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i1a-Wk-lOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="hFy-qB-XG8">
-                    <connections>
-                        <action selector="longPress:" destination="pxV-hO-KII" id="Kw1-Ys-Bb5"/>
-                    </connections>
-                </pongPressGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2603.8167938931297" y="3.5211267605633805"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cEJ-pv-LoF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jII-Le-pW4" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PJu-B7-BFI">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="v1b-aT-p7I" kind="relationship" relationship="rootViewController" id="A3z-Ok-cAQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VGa-H1-aYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="870.99236641221376" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="35.877862595419849" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="roll-dice" width="500" height="334"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
